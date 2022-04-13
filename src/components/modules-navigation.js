@@ -9,6 +9,7 @@ import { humanReadableTimeFromSeconds } from '../utils/helpers';
  * from a track and navigates to the modules page
  */
 const ModulesNav = ({ module, track }) => {
+  console.log(track);
   return (
     <ModulesNavContainer>
       <ModuleTitle>
@@ -28,7 +29,7 @@ const ModulesNav = ({ module, track }) => {
                     <IconArrowRight width="14px" weight="thin" />
                   )}
                   <div>{navModule.title}</div>
-                  <div>{humanReadableTimeFromSeconds(navModule.length)}</div>
+                  <div>{humanReadableTimeFromSeconds(navModule.durationInSeconds)}</div>
                 </ModuleListItemContent>
               </ModuleNavStyledLink>
             </div>
